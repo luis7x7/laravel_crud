@@ -23,8 +23,8 @@ return new class extends Migration
 
             // Constraints
 
-            $table->foreign('persona_id')->references('id')->on('personas');
-            $table->foreign('oficio_id')->references('id')->on('oficios');
+            $table->foreign('persona_id')->references('id')->on('personas')->onDelete('cascade');
+            $table->foreign('oficio_id')->references('id')->on('oficios')->onDelete('cascade');
 
             $table->timestamps();
         });
